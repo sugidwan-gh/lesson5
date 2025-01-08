@@ -7,7 +7,6 @@ jobs:
   test_expression:
     name: job to test expression
     runs-on: ubuntu-latest
-    if: (github.event_name == 'pull_request')
     env:
       aBoolean: ${{ false }}
       aNull: ${{ null }}
