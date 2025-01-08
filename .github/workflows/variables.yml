@@ -16,7 +16,7 @@ jobs:
       JOB_VAR: "Job level variable"
     steps:
       - name: test null
-        if: ${ env.aNull == null }
+        if: ${{ env.aNull == null }}
         run: echo this variable is null    
       - name: test Boolean
         if: ${{ fromJSON(env.aBoolean) }}
