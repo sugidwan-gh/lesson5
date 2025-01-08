@@ -1,4 +1,4 @@
-name: varible and secrets
+name: variable and secrets
 env: 
   WF_VAR: "workFlow level variable"
 on:
@@ -14,7 +14,7 @@ jobs:
         id: stepvar
         env:
           STEP_VAR: "Step level variable"
-        run:
+        run: |
           echo ${{ github.actor }}
           echo $GITHUB_JOB
           echo $WF_VAR
@@ -22,4 +22,3 @@ jobs:
           echo $STEP_VAR
           echo ${{ vars.CONF_VAR }}
           echo ${{ secrets.A_SECRET }}
-          
